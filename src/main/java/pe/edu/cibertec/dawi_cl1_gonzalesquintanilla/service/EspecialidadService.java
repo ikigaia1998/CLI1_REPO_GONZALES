@@ -14,9 +14,7 @@ public class EspecialidadService {
 @Autowired
     private EspecialidadRepository especialidadRepository;
 
-public List<Especialidad> listarEspecialidad(){
-    return especialidadRepository.findAll();
-}
+public List<Especialidad> listarEspecialidad(){return especialidadRepository.findAll();}
 
 public void registrarEspecialidad(Especialidad especialidad) {
         especialidadRepository.save(especialidad);

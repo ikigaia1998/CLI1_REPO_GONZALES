@@ -16,15 +16,15 @@
             <form th:action="@{/Especialidad/frmRegEspecialidad}" method="post" th:object="${especialidadForm}">
                 <div class="mb-3">
                     <label for="idesp" class="form-label">ID</label>
-                    <input type="text" class="form-control" id="idesp" th:field="*{IdEsp}">
+                    <input type="text" class="form-control" id="idesp" th:field="*{idesp}">
                 </div>
                 <div class="mb-3">
                     <label for="nomesp" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nomesp" th:field="*{NomEsp}">
+                    <input type="text" class="form-control" id="nomesp" th:field="*{nomesp}">
                 </div>
                 <div class="mb-3">
                     <label for="costoesp" class="form-label">Costo</label>
-                    <input type="text" class="form-control" id="costoesp" th:field="*{Costo}">
+                    <input type="text" class="form-control" id="costoesp" th:field="*{costo}">
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Guardar</button>

@@ -1,23 +1,25 @@
 package pe.edu.cibertec.dawi_cl1_gonzalesquintanilla.model;
 
 
-import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+import javax.persistence.*;
 
-@Data
+
+@Getter
+@Setter
 @Entity
 @Table(name="especialidad")
 public class Especialidad {
     @Id
-    private String IdEsp ;
+    private String idesp ;
+
     @Column(name = "NomEsp")
-    private String NomEsp;
+    private String nomesp;
+
     @Column(name = "Costo")
-    private Double Costo;
+    private Double costo;
 }
 
 /*

@@ -12,8 +12,8 @@ import pe.edu.cibertec.dawi_cl1_gonzalesquintanilla.model.Especialidad;
 import pe.edu.cibertec.dawi_cl1_gonzalesquintanilla.service.EspecialidadService;
 
 
-@RequestMapping("/Especialidad")
 @Controller
+@RequestMapping("/Especialidad")
 public class EspecialidadController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class EspecialidadController {
 
     @GetMapping("/frmListEspecialidad")
     public String frmListEspecialidad(Model model) {
-        model.addAttribute("listaEspecialidad",especialidadService.listarEspecialidad());
+        model.addAttribute("listaespecialidad",especialidadService.listarEspecialidad());
         return "Especialidad/frmListEspecialidad";
     }
 
@@ -29,14 +29,11 @@ public class EspecialidadController {
     public String frmRegEstado(Model model){
         model.addAttribute("especialidadForm", new Especialidad());
         model.addAttribute("visualizar",false);
-
         return "Especialidad/frmRegEspecialidad";
     }
 
-
     @PostMapping("frmRegEspecialidad")
     public String registrarEstado(@ModelAttribute("especialidadForm") Especialidad especialidad , Model model){
-
         String mensaje="Especialidad registrado correctamente";
         try {
             especialidadService.registrarEspecialidad(especialidad);
