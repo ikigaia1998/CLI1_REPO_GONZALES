@@ -15,10 +15,10 @@ public class Especialidad {
     @Id
     private String idesp ;
 
-    @Column(name = "NomEsp")
+    @Column(name = "nomEsp")
     private String nomesp;
 
-    @Column(name = "Costo")
+    @Column(name = "costo")
     private Double costo;
 }
 
